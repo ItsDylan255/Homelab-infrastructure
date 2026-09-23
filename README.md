@@ -10,7 +10,7 @@ Informatikstudium aufgebaut und betrieben (Schwerpunkt: Technische Systeme).
 
 *Zentrales Dashboard für den schnellen Zugriff auf alle laufenden Dienste*
 
-## Nachgewiesene Kompetenzen
+## Praktische Erfahrungen
 
 Durch den Betrieb dieser Infrastruktur konnte ich praktische Erfahrungen in folgenden Bereichen sammeln:
 
@@ -22,7 +22,6 @@ Durch den Betrieb dieser Infrastruktur konnte ich praktische Erfahrungen in folg
 - Monitoring und Observability
 - Infrastrukturautomatisierung mit Ansible
 - Fehleranalyse anhand von Logs und systemweiten Diagnosewerkzeugen
-- Backup-Strategien und Wiederherstellungsplanung
 - Technische Dokumentation
 
 ## Motivation
@@ -108,8 +107,7 @@ der Webdienste und versendet Benachrichtigungen über ntfy.
 ### Netzwerk & Zugriff
 
 Alle Dienste sind über lesbare lokale Domains (`*.homelab.com`) erreichbar und
-werden über Nginx Proxy Manager bereitgestellt. Die Verbindungen werden über ein
-selbst signiertes Wildcard-Zertifikat von mkcert abgesichert, anstatt direkt über
+werden über Nginx Proxy Manager bereitgestellt. Für interne Webdienste wird ein lokal vertrauenswürdiges Wildcard-Zertifikat mit mkcert verwendet. Die Zertifikate sind nicht für öffentliche Internetdienste vorgesehen, anstatt direkt über
 IP-Adressen und Ports auf die Dienste zuzugreifen.
 
 Der Fernzugriff erfolgt ausschließlich über Tailscale (Mesh-VPN). Auf direkte
@@ -155,8 +153,7 @@ kritische Dienste von automatischen Updates aus.
 
 Eine VM konnte trotz korrekt konfigurierter virtueller Bridge wiederholt keine
 DHCP-Lease beziehen. Durch Netzwerkdiagnosen auf dem Proxmox-Host konnte ich das
-Problem auf die physische Netzwerkkonfiguration eingrenzen, die als wahrscheinlichste
-Ursache identifiziert wurde.
+Problem auf die physische Netzwerkkonfiguration eingrenzen, die als Ursache identifiziert wurde.
 
 ## Sicherheit
 
