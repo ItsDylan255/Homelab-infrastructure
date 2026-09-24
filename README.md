@@ -1,7 +1,5 @@
 # Homelab-Infrastruktur
 
-[🇬🇧 English version](README.en.md)
-
 Self-hosted, mehrstufige Serverinfrastruktur für Netzwerkdienste, Monitoring,
 Automatisierung und Virtualisierung. Als persönliches Projekt parallel zu meinem
 Informatikstudium aufgebaut und betrieben (Schwerpunkt: Technische Systeme).
